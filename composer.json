@@ -1,0 +1,9 @@
+{
+    "name": "bluevine-dev/easy-table-of-contents",
+    "description": "Adds a user friendly and fully automatic way to create and display a table of contents generated from the page content.",
+    "type": "project",
+    "license": "GNU General Public License",
+    "require": {
+        "twbs/bootstrap": "4.3"
+    }
+}
