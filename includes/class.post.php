@@ -1230,8 +1230,8 @@ class ezTOC_Post {
 				$count = $i + 1;
 
 				if ( $current_depth == (int) $matches[ $i ][2] ) {
-
-					$html .= '<li class="ez-toc-page-' . $page . ' ez-toc-heading-level-' . $current_depth . '">';
+          
+          $html .= '<li>';
 				}
 
 				// start lists
@@ -1239,8 +1239,10 @@ class ezTOC_Post {
 
 					for ( $current_depth; $current_depth < (int) $matches[ $i ][2]; $current_depth++ ) {
 
-						$numbered_items[ $current_depth + 1 ] = 0;
-						$html .= '<ul class="ez-toc-list-level-' . $level . '"><li class="ez-toc-heading-level-' . $level . '">';
+            $numbered_items[ $current_depth + 1 ] = 0;
+            // Adds collapse toggle
+            $html .= '<button class="js-collapse" data-toggle="collapse" data-target="#collapse-' . $i . '" aria-expanded="false" aria-controls="collapse-' . $i . '"><img src="' . get_template_directory_uri() . '/dist/images/icons/caret-2.svg" data-no-lazy="1" alt="" /></button>';
+						$html .= '<ul class="collapse" id="collapse-' . $i . '"><li>';
 					}
 				}
 
