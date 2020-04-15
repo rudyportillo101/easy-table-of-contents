@@ -58,5 +58,9 @@ node_modules
 ########
 build
 logs
+vendor/
 
-/vendor/
+.env
+*.sql
+*.zip
+*.gzip
