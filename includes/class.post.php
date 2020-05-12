@@ -987,7 +987,7 @@ class ezTOC_Post {
 			//for ( $i = 0; $i < $count; $i++ ) {
 			foreach ( $matches as $i => $match ) {
 
-				$anchor     = $matches[ $i ]['id'];
+				$anchor     = sanitize_title($matches[ $i ]['id']);
 				$headings[] = str_replace(
 					array(
 						$matches[ $i ][1],                // start of heading
@@ -1341,6 +1341,7 @@ class ezTOC_Post {
 
 		$current_post = $this->post->ID === $this->queriedObjectID;
 		$current_page = $this->getCurrentPage();
+		$id = sanitize_title($id);
 
 		if ( $page === $current_page && $current_post ) {
 
