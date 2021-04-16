@@ -1294,7 +1294,7 @@ class ezTOC_Post {
 
             $numbered_items[ $current_depth + 1 ] = 0;
             // Adds collapse toggle
-            $html .= '<button class="js-collapse" data-toggle="collapse" data-target="#collapse-' . $i . '" aria-expanded="false" aria-controls="collapse-' . $i . '"><img src="' . get_template_directory_uri() . '/assets/images/icons/caret-2.svg" data-no-lazy="1" alt="" /></button>';
+            $html .= '<button class="js-collapse" data-toggle="collapse" data-target="#collapse-' . $i . '" aria-expanded="false" aria-controls="collapse-' . $i . '"><img src="' . get_template_directory_uri() . '/assets/images/icons/caret-2.svg" data-no-lazy="1" loading="lazy" alt="" /></button>';
 						$html .= '<ul class="collapse" id="collapse-' . $i . '"><li>';
 					}
 				}
