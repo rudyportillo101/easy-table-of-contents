@@ -50,7 +50,9 @@ jQuery( function( $ ) {
 
 		if ( 1 === smoothScroll ) {
 
-			$( '.ez-toc-list a' ).click( function( event ) {
+			$( 'a.ez-toc-link' ).on( 'click', function(e) {
+
+				e.preventDefault();
 
 				var self = $( this );
 
